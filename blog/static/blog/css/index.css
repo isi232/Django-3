@@ -1,0 +1,79 @@
+:root{
+  --bg:#fafafa;
+  --card:#ffffff;
+  --accent:#0095f6;
+  --muted:#8e8e8e;
+  --shadow: 0 6px 16px rgba(0,0,0,0.08);
+  --radius:10px;
+  --maxw:380px;
+  font-family: Inter,Segoe UI,Roboto,Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:#111}
+.auth-page{
+  min-height:100vh;
+  display:flex;
+  gap:16px;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:32px 16px;
+}
+
+.card{
+  width:100%;
+  max-width:var(--maxw);
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:20px;
+  text-align:center;
+}
+
+.brand h1{font-family: 'Segoe UI', Roboto, sans-serif; margin:8px 0 16px; color:var(--accent)}
+
+.form{display:flex;flex-direction:column;gap:12px}
+.input-group{text-align:left}
+.input-group label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+.input-group input{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e6e6;
+  font-size:14px;
+  outline:none;
+}
+.input-group input:focus{box-shadow:0 0 0 3px rgba(0,149,246,0.08);border-color:rgba(0,149,246,0.6)}
+
+.password-wrap{position:relative;display:flex;align-items:center}
+.pw-toggle{
+  position:absolute;
+  right:6px;
+  top:50%;
+  transform:translateY(-50%);
+  border:0;background:transparent;padding:6px;border-radius:6px;cursor:pointer;
+  color:#777;
+}
+.pw-toggle:focus{outline:2px solid rgba(0,0,0,0.08)}
+
+.btn{width:100%;padding:10px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.social{background:#1877f2;color:#fff}
+
+.divider{display:flex;align-items:center;gap:10px;margin:6px 0;color:var(--muted);font-size:13px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:#eee;border-radius:1px}
+.divider span{padding:0 8px}
+
+.forgot{display:inline-block;margin-top:8px;color:var(--muted);font-size:13px;text-decoration:none}
+
+.card.alt{padding:12px;background:transparent;box-shadow:none}
+.card.alt a{color:var(--accent);text-decoration:none;font-weight:600}
+
+.app-links{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* Responsive */
+@media (max-width:420px){
+  .card{padding:16px}
+  :root{--maxw:360px}
+}

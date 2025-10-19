@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Xəbərlər — App</title>
+  <link rel="stylesheet" href="static/blog/css/xeberler.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>App Xəbərlər</h1>
+      <div class="nav-links">
+        <a href="home">Geri</a>
+        <a href="index.html" id="logoutBtn">Çıxış</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="news-page">
+    <div class="news-card">
+
+      <!-- Xəbər əlavə etmə -->
+      <div class="news-input">
+        <textarea id="newsText" placeholder="Yeni xəbər əlavə edin..." rows="3"></textarea>
+        <input type="file" id="newsImage" accept="image/*">
+        <button id="addNewsBtn">Əlavə et</button>
+      </div>
+
+      <div id="newsContainer">
+        <!-- Default xəbərlər -->
+        <div class="news-item">
+          <img src="static/blog/images/news1.jpg" class="news-img">
+          <p>Azərbaycan idmançıları dünya çempionatında böyük uğur qazandı.</p>
+          <div class="news-info">
+            <span class="news-time">2025-10-19 12:30</span>
+            <button class="likeBtn">❤ <span class="likeCount">10</span></button>
+          </div>
+          <div class="comments">
+            <input type="text" class="commentInput" placeholder="Yorum yaz...">
+            <button class="commentBtn">Göndər</button>
+            <div class="commentList"></div>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <img src="static/blog/images/news2.jpg" class="news-img">
+          <p>Yeni texnologiyalar sahəsində böyük sərgi keçiriləcək.</p>
+          <div class="news-info">
+            <span class="news-time">2025-10-19 09:45</span>
+            <button class="likeBtn">❤ <span class="likeCount">7</span></button>
+          </div>
+          <div class="comments">
+            <input type="text" class="commentInput" placeholder="Yorum yaz...">
+            <button class="commentBtn">Göndər</button>
+            <div class="commentList"></div>
+          </div>
+        </div>
+
+        <!-- Daha 4-5 default xəbər eyni stil ilə əlavə et -->
+      </div>
+    </div>
+  </main>
+
+  <script src="static/blog/js/xeberler.js"></script>
+</body>
+</html>

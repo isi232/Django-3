@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SignUp — App</title>
+  <link rel="stylesheet" href="static/blog/css/signup.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="card">
+      <div class="brand">
+        <h1>App</h1>
+      </div>
+
+      <form id="signupForm" class="form" novalidate>
+        <div class="input-group">
+          <label for="signup-email">E-poçt</label>
+          <input id="signup-email" name="email" type="email" required />
+        </div>
+
+        <div class="input-group">
+          <label for="signup-fullname">Tam ad</label>
+          <input id="signup-fullname" name="fullname" type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label for="signup-username">İstifadəçi adı</label>
+          <input id="signup-username" name="username" type="text" pattern="^[a-zA-Z0-9._]{3,}$" title="3+ simvol: hərf, rəqəm, . və _ icazəlidir" required />
+        </div>
+
+        <div class="input-group">
+          <label for="signup-password">Parol</label>
+          <div class="password-wrap">
+            <input id="signup-password" name="password" type="password" required minlength="6" />
+            <button type="button" class="pw-toggle" id="signupPwToggle" aria-label="Show password">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn primary">Qeydiyyat</button>
+
+        <div class="small">Qeydiyyata davam etməklə qaydaları qəbul edirsiniz.</div>
+      </form>
+    </div>
+
+    <div class="card alt">
+      <p>Hesabın var? <a href="index">Daxil ol</a></p>
+    </div>
+  </main>
+
+  <script src="static/blog/js/signup.js"></script>
+</body>
+</html>

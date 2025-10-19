@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home — App</title>
+  <link rel="stylesheet" href="static/blog/css/home.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+    <h1>App Threads</h1>
+    <div class="nav-links">
+        <a href="xeberler">Xəbərlər</a>
+        <a href="index.html" id="logoutBtn">Çıxış</a>
+    </div>
+    </nav>
+  </header>
+
+  <main class="home-page">
+    <div class="threads-card">
+      <h2>Threads</h2>
+
+      <div class="thread-input">
+        <textarea id="threadText" placeholder="Buraya yaz..." rows="3"></textarea>
+        <input type="file" id="threadImage" accept="image/*">
+        <button id="addThreadBtn">Əlavə et</button>
+      </div>
+
+      <div id="threadsContainer">
+        <!-- Default yazılar -->
+        <div class="thread">
+          <img src="static/blog/images/default1.jpg" alt="default" class="thread-img">
+          <p>Salam, mən App istifadəçisiyəm!</p>
+          <button class="likeBtn">❤ <span class="likeCount">5</span></button>
+        </div>
+        <div class="thread">
+          <img src="static/blog/images/default2.jpg" alt="default" class="thread-img">
+          <p>Bu threads nümunə mesajıdır.</p>
+          <button class="likeBtn">❤ <span class="likeCount">2</span></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="static/blog/js/home.js"></script>
+</body>
+</html>
